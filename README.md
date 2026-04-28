@@ -1,7 +1,7 @@
 # Behavior Detection System
 
 A lightweight behavior detection project for virtual class proctoring.  
-This repository includes the training notebooks for three model iterations and a small Flask web app for running the final model on webcam or uploaded video input.
+This repository includes the training notebooks for two model iterations and a small Flask web app for running the final model on webcam or uploaded video input.
 
 ## What This Project Does
 
@@ -22,7 +22,7 @@ This repository includes the training notebooks for three model iterations and a
 ## Repository Layout
 
 ```text
-DLProject/
+CVProject/
   Code/
     app.py                          Flask app
     templates/index.html            Web interface
@@ -35,21 +35,19 @@ DLProject/
 
 ## Model Iterations
 
-- `iteration1_baseline_cnn.ipynb`
-  - Baseline 3-layer CNN
-- `iteration2_mobilenet_transfer.ipynb`
+- `mobilenet.ipynb`
   - MobileNetV2 transfer learning
-- `iteration3_domain_adapted_finetune.ipynb`
+- `finetune_mobilenet.ipynb`
   - Domain-adapted fine-tuning with webcam-oriented evaluation
 
 ## Run With Docker
 
 Ensure Docker Engine is running.
 
-From `DLProject/Code`:
+From `CVProject/Code`:
 
 ```bash
-cd DLProject/Code
+cd CVProject/Code
 docker build --no-cache -t exam-proctor .
 docker run --rm -p 5000:5000 exam-proctor
 ```
@@ -64,7 +62,7 @@ To stop the container, press `Ctrl+C`.
 
 ## Run Locally
 
-From `DLProject/Code`:
+From `CVProject/Code`:
 
 ```bash
 pip install -r requirements.txt
