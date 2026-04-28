@@ -26,7 +26,9 @@ CVProject/
   Code/
     app.py                          Flask app
     templates/index.html            Web interface
-    notebooks/                      Training iterations
+    notebooks/
+        mobilenet.ipynb             Baseline MobileNetV2 Training
+        finetune_mobilenet.ipynb    Finetuned MobileNetV2 Training                      
     final_proctor_model.h5          Final saved model
     best_final_proctor_model_finetune.h5
     Dockerfile
